@@ -75,15 +75,15 @@
             endif
           -%}
        
-          <!--button
-            id="ProductSubmitButton-{{ section_id }}"
+          <button
+            id="ProductSubmitButton-{% section_id %}"
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
-          -->   
+          >   
             <!--span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
@@ -92,9 +92,9 @@
               {%- endif -%}
         </span-->
 
-       <div id='product-component-1698231272266'></div>
+<div id='product-component-1698231272266'></div>
 <script type="text/javascript">
-/*<![CDATA[*/
+/*<![CDATA[
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
